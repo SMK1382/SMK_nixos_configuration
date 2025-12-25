@@ -5,7 +5,6 @@
     [ 
       /etc/nixos/hardware-configuration.nix
       ./modules/terminal.nix
-      #./modules/windows-manager.nix
     ];
 
   home-manager.useUserPackages = true;
@@ -21,9 +20,9 @@
   networking.hostName = "SMK-HOST"; 
   networking.networkmanager.enable = true;
 
-  #programs.zsh = {
-  #  enable = true;
-  #};
+  programs.zsh = {
+    enable = true;
+  };
 
   users.defaultUserShell = pkgs.zsh; 
 
@@ -43,11 +42,6 @@
   	i3.enable = true;
   };
   };
-
-  #services.xserver.xkb.layout = "us,ir";
-  #services.xserver.xkb.options = "grp:alt_shift_toggle";
-  #services.xserver.windowManager.i3.enable = true;
-
 
 
   fonts.packages = with pkgs; [
