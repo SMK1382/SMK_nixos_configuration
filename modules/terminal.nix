@@ -1,12 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  # نصب Alacritty
   environment.systemPackages = with pkgs; [
     alacritty
   ];
 
-  # ایجاد فایل کانفیگ جهانی در etc
   environment.etc."xdg/alacritty/alacritty.yml".text = ''
   env:
   TERM: xterm-256color

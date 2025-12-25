@@ -3,15 +3,11 @@
 {
   programs.zsh = {
     enable = true;
-    ohMyZsh = {
+    oh-my-zsh = {
       enable = true;
+      plugins = [ "git" "sudo" ];
       theme = "robbyrussell";
-      plugins = [
-        "git"
-        "sudo"
-      ];
     };
   };
-  users.defaultUserShell = pkgs.zsh;
 }
 

@@ -9,7 +9,6 @@
     };
   };
 
-
   outputs = { self, nixpkgs, home-manager }: {
     nixosConfigurations.SMK-HOST = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -17,6 +16,5 @@
 	home-manager.nixosModules.home-manager
       ];
     };
-
   };
 }
