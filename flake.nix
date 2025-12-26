@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = ":)";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -10,7 +10,7 @@
   };
 
   outputs = { self, nixpkgs, home-manager }: {
-    nixosConfigurations.SMK-HOST = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.SMK_HOST = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [ ./configuration.nix
 	home-manager.nixosModules.home-manager

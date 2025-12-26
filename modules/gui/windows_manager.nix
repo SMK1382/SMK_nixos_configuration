@@ -43,15 +43,15 @@
 
       bindsym $mod+Shift+space floating toggle
       bindsym $mod+space focus mode_toggle
-      
+ 
 
       bar {
       position bottom
       status_command i3status
-      hidden_state hide
+      mode hide
+      modifier Mod4
       }
 
-      bindsym $mod+b exec "i3-msg bar mode toggle"
 
 
       set $ws1 "1"
