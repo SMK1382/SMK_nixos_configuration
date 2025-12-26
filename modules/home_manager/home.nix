@@ -1,8 +1,8 @@
 { config, pkgs, ... } :
 {
 	imports = [
-		./shell.nix
-		./windows-manager.nix
+		../gui/shell.nix
+		../gui/windows_manager.nix
 	];
 	home.username = "mohammadreza";
 	home.homeDirectory = "/home/mohammadreza";
