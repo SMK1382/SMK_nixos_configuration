@@ -8,6 +8,10 @@
       ./modules/gui/terminal.nix
     ];
 
+
+  networking.hostName = "SMK_HOST";
+
+
   home-manager.useUserPackages = true;
   home-manager.useGlobalPkgs = true;
   home-manager.backupFileExtension = "backup";
