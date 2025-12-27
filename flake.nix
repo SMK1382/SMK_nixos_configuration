@@ -10,7 +10,7 @@
   };
 
   outputs = { self, nixpkgs, home-manager }: {
-    nixosConfigurations.SMK_HOST = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.SMK-HOST = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [ ./configuration.nix
 	home-manager.nixosModules.home-manager

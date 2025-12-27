@@ -4,11 +4,7 @@
 	boot.loader.efi.canTouchEfiVariables = true;
 
 
-<<<<<<< HEAD
-	#networking.hostName = "SMK_HOST";
-=======
 	networking.hostName = "SMK-HOST";
->>>>>>> a5796cb (4)
 	networking.networkmanager.enable = true;
 	networking.firewall.enable = true;
 
@@ -16,12 +12,9 @@
 	hardware.bluetooth.enable = true;
 	services.blueman.enable = true;
 	
-<<<<<<< HEAD
 
 	hardware.pulseaudio.enable = false;
-=======
 	services.pulseaudio.enable = false;
->>>>>>> a5796cb (4)
 	services.pipewire = {
             enable = true;
             pulse.enable = true;
@@ -50,10 +43,7 @@
 	
 	environment.systemPackages = with pkgs; [
  		neovim
-<<<<<<< HEAD
 		pavucontrol
-=======
->>>>>>> a5796cb (4)
     		pipewire
 		pamixer
 		pavucontrol
@@ -66,6 +56,7 @@
 		unzip
 		wget
 		tree
+		ciscoPacketTracer8
 	];
 
 }
