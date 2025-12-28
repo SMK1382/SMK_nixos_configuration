@@ -36,6 +36,10 @@
 	services.xserver.xkb.options = "grp:alt_shift_toggle";
 	services.xserver.windowManager.i3.enable = true;
 
+	services.libinput.enable = true;
+	services.libinput.touchpad.disableWhileTyping = true;
+
+
 	fonts.packages = with pkgs; [
 		nerd-fonts.jetbrains-mono
 	];
@@ -56,7 +60,9 @@
 		unzip
 		wget
 		tree
-		ciscoPacketTracer8
+		throne
+		xray
+		# ciscoPacketTracer8
 	];
 
 }

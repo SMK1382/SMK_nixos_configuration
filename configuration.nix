@@ -9,7 +9,6 @@
     ];
 
 
-  networking.hostName = "SMK_HOST";
 
 
   home-manager.useUserPackages = true;
