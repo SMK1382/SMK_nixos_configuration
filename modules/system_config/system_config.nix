@@ -4,27 +4,6 @@
 	boot.loader.efi.canTouchEfiVariables = true;
 
 
-	networking.hostName = "SMK-HOST";
-	networking.networkmanager.enable = true;
-	networking.firewall.enable = true;
-
-	
-	hardware.bluetooth.enable = true;
-	services.blueman.enable = true;
-	
-
-	hardware.pulseaudio.enable = false;
-	services.pulseaudio.enable = false;
-	services.pipewire = {
-            enable = true;
-            pulse.enable = true;
-            jack.enable = true;
-        };
-
-
-	programs.zsh.enable = true;
-	users.defaultUserShell = pkgs.zsh;
-
 	time.timeZone = "Asia/Tehran";
 
 
@@ -36,19 +15,46 @@
 	services.xserver.xkb.options = "grp:alt_shift_toggle";
 	services.xserver.windowManager.i3.enable = true;
 
+
 	services.libinput.enable = true;
 	services.libinput.touchpad.disableWhileTyping = true;
 
+
+	networking.hostName = "SMK-HOST";
+	networking.networkmanager.enable = true;
+	networking.firewall.enable = true;
+
+	
+	hardware.bluetooth.enable = true;
+	services.blueman.enable = true;
+	
+
+	services.pulseaudio.enable = false;
+	services.pipewire = {
+            enable = true;
+            pulse.enable = true;
+            jack.enable = true;
+        };
+
+
+	programs.zsh.enable = true;
+	users.defaultUserShell = pkgs.zsh;
 
 	fonts.packages = with pkgs; [
 		nerd-fonts.jetbrains-mono
 	];
 	
-	
+	boot.kernelModules = [ "tun" ];
+	programs.throne = {
+   		enable = true;
+    		tunMode = {
+      		enable = true;
+      		setuid = false;
+    	        };
+  	};
+
 	environment.systemPackages = with pkgs; [
  		neovim
-		pavucontrol
-    		pipewire
 		pamixer
 		pavucontrol
     		wireplumber
@@ -58,11 +64,15 @@
 		mpv
 		zip
 		unzip
+		unrar-free
 		wget
 		tree
 		throne
-		xray
-		# ciscoPacketTracer8
+		python3
+		nodejs_24
+		brightnessctl
+		v2rayn
+		btop
 	];
 
 }

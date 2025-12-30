@@ -43,7 +43,10 @@
 
       bindsym $mod+Shift+space floating toggle
       bindsym $mod+space focus mode_toggle
- 
+
+      bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
+      bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
+      bindsym XF86AudioMute exec --no-startup-id pamixer -t
 
       bar {
       position bottom
