@@ -48,6 +48,8 @@
       bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
       bindsym XF86AudioMute exec --no-startup-id pamixer -t
 
+      bindsym $mod+Shift+s exec --no-startup-id flameshot gui
+
       bar {
       position bottom
       status_command i3status

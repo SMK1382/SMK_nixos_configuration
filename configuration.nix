@@ -6,6 +6,7 @@
       /etc/nixos/hardware-configuration.nix
       ./modules/system_config/system_config.nix
       ./modules/gui/terminal.nix
+#      ./modules/neovim/neovim.nix
     ];
 
 

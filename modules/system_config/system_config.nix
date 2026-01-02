@@ -19,7 +19,6 @@
 	services.libinput.enable = true;
 	services.libinput.touchpad.disableWhileTyping = true;
 
-
 	networking.hostName = "SMK-HOST";
 	networking.networkmanager.enable = true;
 	networking.firewall.enable = true;
@@ -53,13 +52,18 @@
     	        };
   	};
 
+
+	nixpkgs.config.allowUnfree = true;
+
 	environment.systemPackages = with pkgs; [
  		neovim
 		pamixer
 		pavucontrol
-    		wireplumber
+   	wireplumber
 		git
 		gh
+    curl
+    wget
 		telegram-desktop
 		mpv
 		zip
@@ -73,6 +77,10 @@
 		brightnessctl
 		v2rayn
 		btop
+		ntfs3g
+		flameshot
+		wpsoffice
+		python313Packages.jupyterlab
 	];
 
 }
