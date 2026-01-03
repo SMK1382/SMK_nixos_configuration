@@ -3,7 +3,7 @@
 	imports = [
 		../gui/shell.nix
 		../gui/windows_manager.nix
-#		../neovim/neovim.nix
+		../neovim/neovim.nix
 	];
 	home.username = "mohammadreza";
 	home.homeDirectory = "/home/mohammadreza";
